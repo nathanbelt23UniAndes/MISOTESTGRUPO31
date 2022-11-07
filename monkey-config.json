@@ -3,6 +3,7 @@
     "baseUrl":"http://localhost:2368/ghost/",
     "email": "camiloandresgtr@gmail.com",
     "password": "4Ndr3s.932010+",
+    "buttonId":"ember7",
     "env":{
         "appName":"Ghost App",
         "events":90,

@@ -9,6 +9,7 @@ const delay = Cypress.env('delay') || 100
 var seed = Cypress.env('seed')
 var userName = Cypress.config('email') || "No tiene asignado"
 var pass = Cypress.config('password')
+var button = Cypress.config('buttonId') || "ember7"
 
 const pct_clicks = Cypress.env('pctClicks') || 19
 const pct_scrolls = Cypress.env('pctScroll') || 17
@@ -555,7 +556,7 @@ function login() {
     cy.get('form').within(() => {
         cy.get('input[name="identification"]').type(userName)
         cy.get('input[name="password"]').type(pass)
-        cy.get('button[id="ember7"]').click()
+        cy.get(`button[id="${button}"]`).click()
     });
 }
 
